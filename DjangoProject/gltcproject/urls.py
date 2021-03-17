@@ -16,11 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 # import gltcapp.views
-# import blog.views
+import blog.views
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('home',gltcapp.views.home, name = 'home'),
     # path('blog',blog.views.blog, name = 'blog'),
+    path('',blog.views.index, name = 'blog'),
 ]
